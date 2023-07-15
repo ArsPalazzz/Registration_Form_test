@@ -1,0 +1,418 @@
+@font-face {
+  font-family: "Work Sans Regular";
+  src: url("fonts/worksans/WorkSans-Regular.otf");
+}
+@font-face {
+  font-family: "Work Sans Light";
+  src: url("fonts/worksans/WorkSans-Light.otf");
+}
+@font-face {
+  font-family: "PTSans Regular";
+  src: url("fonts/PT_Sans/PTSans-Regular.ttf");
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Work Sans Regular";
+  background-color: rgb(220, 220, 220);
+}
+
+.container {
+  height: 80vh;
+  width: 60vw;
+  margin: auto;
+  display: flex;
+  margin-top: 10vh;
+  flex-direction: row;
+
+ 
+}
+.container .leftSide {
+  width: 20%;
+  height: 100%;
+  color: white;
+  background-color: #5A61ED;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.container .leftSide p {
+  position: relative;
+  top: -10vh;
+  display: inline;
+  transform: rotate(-90deg);
+  right: -2.4vw;
+  font-family: "PTSans Regular";
+  font-size: 3.5vw;
+
+  
+}
+.container .rightSide {
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: pict 2s infinite linear;
+  background-image: url("images/Shape.svg");
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 56%;
+}
+.container .rightSide .informationBlock {
+  margin: auto;
+  width: 90%;
+}
+.container .rightSide .informationBlock h1 {
+  margin-top: 2vh;
+  margin-bottom: 0;
+}
+.container .rightSide .informationBlock > p {
+  margin-top: 0;
+  margin-bottom: 3vh;
+  font-size: 1.1rem;
+  color: #111111;
+  font-family: "Work Sans Light";
+}
+.container .rightSide .informationBlock .firstFormRow, .container .rightSide .informationBlock .secondFormRow, .container .rightSide .informationBlock .thirdFormRow, .container .rightSide .informationBlock .fourthFormRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+  width: 100%;
+}
+.container .rightSide .informationBlock .firstFormRow > div, .container .rightSide .informationBlock .secondFormRow > div, .container .rightSide .informationBlock .thirdFormRow > div, .container .rightSide .informationBlock .fourthFormRow > div {
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+}
+.container .rightSide .informationBlock .firstFormRow > div > label, .container .rightSide .informationBlock .secondFormRow > div > label, .container .rightSide .informationBlock .thirdFormRow > div > label, .container .rightSide .informationBlock .fourthFormRow > div > label {
+  margin-bottom: 1vh;
+  font-family: "Work Sans Light";
+  font-weight: 100;
+  font-size: 0.8vw;
+  color: #7C7C7C;
+
+  width: 20vw;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container .rightSide .informationBlock .firstFormRow > div > input[type=text], .container .rightSide .informationBlock .secondFormRow > div > input[type=text], .container .rightSide .informationBlock .thirdFormRow > div > input[type=text], .container .rightSide .informationBlock .fourthFormRow > div > input[type=text] {
+  padding: 6px;
+  border: 0;
+  border-bottom: 2px solid #F2F2F2;
+  font-size: 1vw;
+  font-weight: normal;
+  width: 100%;
+}
+.container .rightSide .informationBlock .firstFormRow > div > input[type=text]:focus, .container .rightSide .informationBlock .secondFormRow > div > input[type=text]:focus, .container .rightSide .informationBlock .thirdFormRow > div > input[type=text]:focus, .container .rightSide .informationBlock .fourthFormRow > div > input[type=text]:focus {
+  outline: 0;
+}
+.container .rightSide .informationBlock .firstFormRow > div > select, .container .rightSide .informationBlock .secondFormRow > div > select, .container .rightSide .informationBlock .thirdFormRow > div > select, .container .rightSide .informationBlock .fourthFormRow > div > select {
+  padding: 6px;
+  border: 0;
+  border-bottom: 2px solid #F2F2F2;
+  font-size: 1vw;
+  font-weight: normal;
+  width: 100%;
+}
+.container .rightSide .informationBlock .firstFormRow > div > select:focus, .container .rightSide .informationBlock .secondFormRow > div > select:focus, .container .rightSide .informationBlock .thirdFormRow > div > select:focus, .container .rightSide .informationBlock .fourthFormRow > div > select:focus {
+  outline: 0;
+}
+.container .rightSide .informationBlock .firstFormRow > div > select:hover, .container .rightSide .informationBlock .secondFormRow > div > select:hover, .container .rightSide .informationBlock .thirdFormRow > div > select:hover, .container .rightSide .informationBlock .fourthFormRow > div > select:hover {
+  cursor: pointer;
+}
+.container .rightSide .informationBlock .firstFormRow > div .dateInputBlock, .container .rightSide .informationBlock .secondFormRow > div .dateInputBlock, .container .rightSide .informationBlock .thirdFormRow > div .dateInputBlock, .container .rightSide .informationBlock .fourthFormRow > div .dateInputBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .rightSide .informationBlock .firstFormRow > div .dateInputBlock > select, .container .rightSide .informationBlock .secondFormRow > div .dateInputBlock > select, .container .rightSide .informationBlock .thirdFormRow > div .dateInputBlock > select, .container .rightSide .informationBlock .fourthFormRow > div .dateInputBlock > select {
+  padding: 6px;
+  border: 0;
+  border-bottom: 2px solid #F2F2F2;
+  font-size: 1vw;
+  font-weight: normal;
+  width: 30%;
+}
+.container .rightSide .informationBlock .firstFormRow > div .dateInputBlock > select:focus, .container .rightSide .informationBlock .secondFormRow > div .dateInputBlock > select:focus, .container .rightSide .informationBlock .thirdFormRow > div .dateInputBlock > select:focus, .container .rightSide .informationBlock .fourthFormRow > div .dateInputBlock > select:focus {
+  outline: 0;
+}
+.container .rightSide .informationBlock .firstFormRow > div .dateInputBlock > select:hover, .container .rightSide .informationBlock .secondFormRow > div .dateInputBlock > select:hover, .container .rightSide .informationBlock .thirdFormRow > div .dateInputBlock > select:hover, .container .rightSide .informationBlock .fourthFormRow > div .dateInputBlock > select:hover {
+  cursor: pointer;
+}
+.container .rightSide .informationBlock .firstFormRow > div .radio, .container .rightSide .informationBlock .secondFormRow > div .radio, .container .rightSide .informationBlock .thirdFormRow > div .radio, .container .rightSide .informationBlock .fourthFormRow > div .radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .rightSide .informationBlock .firstFormRow > div .radio .maleBlock, .container .rightSide .informationBlock .firstFormRow > div .radio .femaleBlock, .container .rightSide .informationBlock .secondFormRow > div .radio .maleBlock, .container .rightSide .informationBlock .secondFormRow > div .radio .femaleBlock, .container .rightSide .informationBlock .thirdFormRow > div .radio .maleBlock, .container .rightSide .informationBlock .thirdFormRow > div .radio .femaleBlock, .container .rightSide .informationBlock .fourthFormRow > div .radio .maleBlock, .container .rightSide .informationBlock .fourthFormRow > div .radio .femaleBlock {
+  display: flex;
+  margin-right: 2vw;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .rightSide .informationBlock .firstFormRow > div .radio .maleBlock > input[type=radio], .container .rightSide .informationBlock .firstFormRow > div .radio .femaleBlock > input[type=radio], .container .rightSide .informationBlock .secondFormRow > div .radio .maleBlock > input[type=radio], .container .rightSide .informationBlock .secondFormRow > div .radio .femaleBlock > input[type=radio], .container .rightSide .informationBlock .thirdFormRow > div .radio .maleBlock > input[type=radio], .container .rightSide .informationBlock .thirdFormRow > div .radio .femaleBlock > input[type=radio], .container .rightSide .informationBlock .fourthFormRow > div .radio .maleBlock > input[type=radio], .container .rightSide .informationBlock .fourthFormRow > div .radio .femaleBlock > input[type=radio] {
+  margin-right: 0.6vw;
+  width: 100%;
+  accent-color: #5A61ED;
+}
+.container .rightSide .informationBlock .firstFormRow > div .radio .maleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .firstFormRow > div .radio .femaleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .secondFormRow > div .radio .maleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .secondFormRow > div .radio .femaleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .thirdFormRow > div .radio .maleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .thirdFormRow > div .radio .femaleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .fourthFormRow > div .radio .maleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .fourthFormRow > div .radio .femaleBlock > input[type=radio]:focus {
+  outline: 0;
+}
+.container .rightSide .informationBlock .firstFormRow > div .radio .maleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .firstFormRow > div .radio .femaleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .secondFormRow > div .radio .maleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .secondFormRow > div .radio .femaleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .thirdFormRow > div .radio .maleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .thirdFormRow > div .radio .femaleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .fourthFormRow > div .radio .maleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .fourthFormRow > div .radio .femaleBlock > input[type=radio]:hover {
+  cursor: pointer;
+}
+.container .rightSide .informationBlock .firstFormRow > div .radio .maleBlock label, .container .rightSide .informationBlock .firstFormRow > div .radio .femaleBlock label, .container .rightSide .informationBlock .secondFormRow > div .radio .maleBlock label, .container .rightSide .informationBlock .secondFormRow > div .radio .femaleBlock label, .container .rightSide .informationBlock .thirdFormRow > div .radio .maleBlock label, .container .rightSide .informationBlock .thirdFormRow > div .radio .femaleBlock label, .container .rightSide .informationBlock .fourthFormRow > div .radio .maleBlock label, .container .rightSide .informationBlock .fourthFormRow > div .radio .femaleBlock label {
+  font-size: 1vw;
+  margin-top: 2px;
+}
+.container .rightSide .informationBlock .firstFormRow > div .radio .maleBlock label:hover, .container .rightSide .informationBlock .firstFormRow > div .radio .femaleBlock label:hover, .container .rightSide .informationBlock .secondFormRow > div .radio .maleBlock label:hover, .container .rightSide .informationBlock .secondFormRow > div .radio .femaleBlock label:hover, .container .rightSide .informationBlock .thirdFormRow > div .radio .maleBlock label:hover, .container .rightSide .informationBlock .thirdFormRow > div .radio .femaleBlock label:hover, .container .rightSide .informationBlock .fourthFormRow > div .radio .maleBlock label:hover, .container .rightSide .informationBlock .fourthFormRow > div .radio .femaleBlock label:hover {
+  cursor: pointer;
+}
+.container .rightSide .bottomInfo {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .rightSide .bottomInfo .haveAnAccountBlock p {
+  font-size: 0.9vw;
+}
+.container .rightSide .bottomInfo .haveAnAccountBlock p a {
+  color: #5A61ED;
+  text-decoration: underline;
+}
+.container .rightSide .bottomInfo .haveAnAccountBlock p a:hover {
+  cursor: pointer;
+}
+.container .rightSide .bottomInfo .submitBtnBlock input[type=submit] {
+  appearance: none;
+  border: 0;
+  background: #5A61ED;
+  color: #fff;
+  padding: 1.4vh 2vw;
+  font-size: 1vw;
+  font-family: "PTSans Regular";
+  transition: background 0.2s linear;
+}
+.container .rightSide .bottomInfo .submitBtnBlock input[type=submit]:hover {
+  background: #4349c3;
+  cursor: pointer;
+}
+.container .rightSide .bottomInfo .submitBtnBlock input[type=submit]:focus {
+  outline: none;
+  background: #2b3194;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+
+@keyframes pict {
+  0% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 100% 112%;
+  }
+  0% {
+    background-position: 100% 100%;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    height: 108vh;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    flex-direction: column;
+  }
+  .container .leftSide {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  .container .leftSide p {
+    position: relative;
+    top: -2vh;
+    display: inline;
+    transform: rotate(0deg);
+    right: -2.4vw;
+    font-size: 4.5vw;
+  }
+  .container .rightSide {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .container .rightSide .informationBlock {
+    margin: auto;
+    width: 90%;
+  }
+  .container .rightSide .informationBlock h1 {
+    margin-top: 4vh;
+    margin-bottom: 0;
+    font-size: 5.5vw;
+  }
+  .container .rightSide .informationBlock > p {
+    margin-top: 1vh;
+    margin-bottom: 4vh;
+    font-size: 0.75rem;
+  }
+  .container .rightSide .informationBlock .firstFormRow, .container .rightSide .informationBlock .secondFormRow, .container .rightSide .informationBlock .thirdFormRow, .container .rightSide .informationBlock .fourthFormRow {
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div, .container .rightSide .informationBlock .secondFormRow > div, .container .rightSide .informationBlock .thirdFormRow > div, .container .rightSide .informationBlock .fourthFormRow > div {
+    margin-bottom: 3vh;
+    width: 90%;
+    flex-direction: column;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div > label, .container .rightSide .informationBlock .secondFormRow > div > label, .container .rightSide .informationBlock .thirdFormRow > div > label, .container .rightSide .informationBlock .fourthFormRow > div > label {
+    margin-bottom: 1vh;
+    font-size: 2.4vw;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div > input[type=text], .container .rightSide .informationBlock .secondFormRow > div > input[type=text], .container .rightSide .informationBlock .thirdFormRow > div > input[type=text], .container .rightSide .informationBlock .fourthFormRow > div > input[type=text] {
+    padding: 6px;
+    border: 0;
+    border-bottom: 2px solid #F2F2F2;
+    font-size: 2.4vw;
+    width: 100%;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div > input[type=text]:focus, .container .rightSide .informationBlock .secondFormRow > div > input[type=text]:focus, .container .rightSide .informationBlock .thirdFormRow > div > input[type=text]:focus, .container .rightSide .informationBlock .fourthFormRow > div > input[type=text]:focus {
+    outline: 0;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div > select, .container .rightSide .informationBlock .secondFormRow > div > select, .container .rightSide .informationBlock .thirdFormRow > div > select, .container .rightSide .informationBlock .fourthFormRow > div > select {
+    padding: 6px;
+    border-bottom: 2px solid #F2F2F2;
+    font-size: 2.4vw;
+    width: 100%;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div > select:focus, .container .rightSide .informationBlock .secondFormRow > div > select:focus, .container .rightSide .informationBlock .thirdFormRow > div > select:focus, .container .rightSide .informationBlock .fourthFormRow > div > select:focus {
+    outline: 0;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div > select:hover, .container .rightSide .informationBlock .secondFormRow > div > select:hover, .container .rightSide .informationBlock .thirdFormRow > div > select:hover, .container .rightSide .informationBlock .fourthFormRow > div > select:hover {
+    cursor: pointer;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div .dateInputBlock, .container .rightSide .informationBlock .secondFormRow > div .dateInputBlock, .container .rightSide .informationBlock .thirdFormRow > div .dateInputBlock, .container .rightSide .informationBlock .fourthFormRow > div .dateInputBlock {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div .dateInputBlock > select, .container .rightSide .informationBlock .secondFormRow > div .dateInputBlock > select, .container .rightSide .informationBlock .thirdFormRow > div .dateInputBlock > select, .container .rightSide .informationBlock .fourthFormRow > div .dateInputBlock > select {
+    padding: 6px;
+    border: 0;
+    border-bottom: 2px solid #F2F2F2;
+    font-size: 2.4vw;
+    width: 30%;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div .dateInputBlock > select:focus, .container .rightSide .informationBlock .secondFormRow > div .dateInputBlock > select:focus, .container .rightSide .informationBlock .thirdFormRow > div .dateInputBlock > select:focus, .container .rightSide .informationBlock .fourthFormRow > div .dateInputBlock > select:focus {
+    outline: 0;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div .dateInputBlock > select:hover, .container .rightSide .informationBlock .secondFormRow > div .dateInputBlock > select:hover, .container .rightSide .informationBlock .thirdFormRow > div .dateInputBlock > select:hover, .container .rightSide .informationBlock .fourthFormRow > div .dateInputBlock > select:hover {
+    cursor: pointer;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div .radio, .container .rightSide .informationBlock .secondFormRow > div .radio, .container .rightSide .informationBlock .thirdFormRow > div .radio, .container .rightSide .informationBlock .fourthFormRow > div .radio {
+    flex-direction: row;
+    align-items: center;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div .radio .maleBlock, .container .rightSide .informationBlock .firstFormRow > div .radio .femaleBlock, .container .rightSide .informationBlock .secondFormRow > div .radio .maleBlock, .container .rightSide .informationBlock .secondFormRow > div .radio .femaleBlock, .container .rightSide .informationBlock .thirdFormRow > div .radio .maleBlock, .container .rightSide .informationBlock .thirdFormRow > div .radio .femaleBlock, .container .rightSide .informationBlock .fourthFormRow > div .radio .maleBlock, .container .rightSide .informationBlock .fourthFormRow > div .radio .femaleBlock {
+    display: flex;
+    margin-right: 2vw;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div .radio .maleBlock > input[type=radio], .container .rightSide .informationBlock .firstFormRow > div .radio .femaleBlock > input[type=radio], .container .rightSide .informationBlock .secondFormRow > div .radio .maleBlock > input[type=radio], .container .rightSide .informationBlock .secondFormRow > div .radio .femaleBlock > input[type=radio], .container .rightSide .informationBlock .thirdFormRow > div .radio .maleBlock > input[type=radio], .container .rightSide .informationBlock .thirdFormRow > div .radio .femaleBlock > input[type=radio], .container .rightSide .informationBlock .fourthFormRow > div .radio .maleBlock > input[type=radio], .container .rightSide .informationBlock .fourthFormRow > div .radio .femaleBlock > input[type=radio] {
+    margin-right: 0.6vw;
+    width: 100%;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div .radio .maleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .firstFormRow > div .radio .femaleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .secondFormRow > div .radio .maleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .secondFormRow > div .radio .femaleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .thirdFormRow > div .radio .maleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .thirdFormRow > div .radio .femaleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .fourthFormRow > div .radio .maleBlock > input[type=radio]:focus, .container .rightSide .informationBlock .fourthFormRow > div .radio .femaleBlock > input[type=radio]:focus {
+    outline: 0;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div .radio .maleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .firstFormRow > div .radio .femaleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .secondFormRow > div .radio .maleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .secondFormRow > div .radio .femaleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .thirdFormRow > div .radio .maleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .thirdFormRow > div .radio .femaleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .fourthFormRow > div .radio .maleBlock > input[type=radio]:hover, .container .rightSide .informationBlock .fourthFormRow > div .radio .femaleBlock > input[type=radio]:hover {
+    cursor: pointer;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div .radio .maleBlock label, .container .rightSide .informationBlock .firstFormRow > div .radio .femaleBlock label, .container .rightSide .informationBlock .secondFormRow > div .radio .maleBlock label, .container .rightSide .informationBlock .secondFormRow > div .radio .femaleBlock label, .container .rightSide .informationBlock .thirdFormRow > div .radio .maleBlock label, .container .rightSide .informationBlock .thirdFormRow > div .radio .femaleBlock label, .container .rightSide .informationBlock .fourthFormRow > div .radio .maleBlock label, .container .rightSide .informationBlock .fourthFormRow > div .radio .femaleBlock label {
+    font-size: 2.4vw;
+    margin-top: 2px;
+  }
+  .container .rightSide .informationBlock .firstFormRow > div .radio .maleBlock label:hover, .container .rightSide .informationBlock .firstFormRow > div .radio .femaleBlock label:hover, .container .rightSide .informationBlock .secondFormRow > div .radio .maleBlock label:hover, .container .rightSide .informationBlock .secondFormRow > div .radio .femaleBlock label:hover, .container .rightSide .informationBlock .thirdFormRow > div .radio .maleBlock label:hover, .container .rightSide .informationBlock .thirdFormRow > div .radio .femaleBlock label:hover, .container .rightSide .informationBlock .fourthFormRow > div .radio .maleBlock label:hover, .container .rightSide .informationBlock .fourthFormRow > div .radio .femaleBlock label:hover {
+    cursor: pointer;
+  }
+  .container .rightSide .bottomInfo {
+    margin-top: 6vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container .rightSide .bottomInfo .haveAnAccountBlock {
+    display: flex;
+    margin-bottom: 2vh;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .container .rightSide .bottomInfo .haveAnAccountBlock p {
+    font-size: 2.6vw;
+  }
+  .container .rightSide .bottomInfo .submitBtnBlock {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 4vh;
+  }
+  .container .rightSide .bottomInfo .submitBtnBlock input[type=submit] {
+    padding: 1.6vh 4vw;
+    font-size: 2.8vw;
+  }
+}
+
+
+.newBlock {
+  margin: auto;
+  width: 90%;
+  height: 50vh;
+  padding-left: 8%;
+}
+
+.newH2 {
+  padding-top: 24vh;
+  font-size: 2em;
+  font-family: "Work Sans Regular";
+}
+
+.newP {
+  padding-top: 4vh;
+  font-size: 1vw;
+  font-family: "Work Sans Light";
+  width: 5px;
+}
+
+
+
+
+/* .text {
+  display: inline-block; position: relative; overflow: hidden; margin: 10px; width: 250px;
+  font-size: 16px; line-height: 1.2em; max-height: calc(1.2em * 3);
+}
+
+.text::after {content: "..."; position: absolute; right: 0; top: 2.3em;} */
+
+
+
+
+
+
+/*aaaaaaaaaaaaaaaaaaaas*/
